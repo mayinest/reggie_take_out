@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
     public R<String> exceptionHandler(SQLIntegrityConstraintViolationException ex){
         log.error(ex.getMessage());
-
+//数据库加了禁止重复约束字段的==========1，一旦重复就会抛出异常异常中有Duplicate entry会被捕获
         if(ex.getMessage().contains("Duplicate entry")){
             String[] split = ex.getMessage().split(" ");
             String msg = split[2]+"已存在";
@@ -32,5 +32,10 @@ public class GlobalExceptionHandler {
         }
 
         return R.error("失败了");
+    }
+    @ExceptionHandler(CustomException.class)
+    public R<String> exceptionHandler(CustomException ex){
+        log.info(ex.getMessage());
+        return R.error(ex.getMessage());
     }
 }

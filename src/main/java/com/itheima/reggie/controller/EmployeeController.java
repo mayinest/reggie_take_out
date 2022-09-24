@@ -1,6 +1,7 @@
 package com.itheima.reggie.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.reggie.common.R;
@@ -34,11 +35,9 @@ public class EmployeeController {
     public R<Employee> login(HttpServletRequest request, @RequestBody Employee employee) {
 //        Employee::getUsername就相当于创建一个Employee对象并调用其getUsername方法
 
-
 //        1.将密码进行加密处理
         String password = employee.getPassword();
         password = DigestUtils.md5DigestAsHex(password.getBytes());
-
 
 //        2.根据页面提交的用户名去查找数据库
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
@@ -89,14 +88,12 @@ public class EmployeeController {
 //        设置初始密码123456，进行MD5加密
         employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
 
-//        employee.setCreateTime(LocalDateTime.now());
-//        employee.setUpdateTime(LocalDateTime.now());
+
 
         //获取当前登录用户的id
         Long empId = (Long) request.getSession().getAttribute("employee");
 
-//        employee.setCreateUser(empId);
-//        employee.setUpdateUser(empId);
+
         //这个方法不太好，原因是有很多方法需要些try，太多代码重复====>用全局捕获
 //        try {
             employeeService.save(employee);
@@ -121,7 +118,7 @@ public class EmployeeController {
         Page pageInfo = new Page(page, pageSize);
         //构造条件构造器
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper();
-        //添加过滤条件
+        //添加过滤条件===》搜索框的模糊查询
         queryWrapper.like(StringUtils.isNotEmpty(name),Employee::getName,name);
         //添加排序条件
         queryWrapper.orderByDesc(Employee::getUpdateTime);
@@ -139,8 +136,7 @@ public class EmployeeController {
     public R<String> update(HttpServletRequest request,@RequestBody Employee employee){
         log.info(employee.toString());
         Long empId = (Long) request.getSession().getAttribute("employee");
-//        employee.setUpdateTime(LocalDateTime.now());
-//        employee.setUpdateUser(empId);
+
         employeeService.updateById(employee);
         return R.success("员工信息修改成功");
     }
