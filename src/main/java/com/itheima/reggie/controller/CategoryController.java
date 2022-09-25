@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @RestController
 @RequestMapping("/category")
@@ -37,6 +38,13 @@ public class CategoryController {
         categoryService.page(pageInfo,queryWrapper);
         return R.success(pageInfo);
     }
+
+    /**
+     * 保存员工
+     * @param request
+     * @param category
+     * @return
+     */
     @PostMapping
     public R<String> save(HttpServletRequest request, @RequestBody Category category) {
         log.info("添加类型={}", category.getType());
@@ -66,5 +74,25 @@ public class CategoryController {
         categoryService.updateById(category);
         return R.success("修改成功");
     }
+
+    /**
+     * 添加菜品分类下拉列表
+     * @param category
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Category>> list(Category category){
+        //条件构造器
+        LambdaQueryWrapper<Category> queryWrapper = Wrappers.lambdaQuery();
+        //添加条件===》是套餐还是菜品
+        queryWrapper.eq(category.getType() != null, Category::getType,category.getType());
+        //添加排序条件
+        queryWrapper.orderByAsc(Category::getSort).orderByDesc(Category::getUpdateTime);
+
+        List<Category> list = categoryService.list(queryWrapper);
+        return R.success(list);
+    }
+
+
 }
 
