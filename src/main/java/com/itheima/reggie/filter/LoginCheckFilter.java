@@ -30,12 +30,16 @@ public class LoginCheckFilter implements Filter {
 //        1.获取本次请求的URI
         String requestURI = request.getRequestURI();
 
+        log.info("拦截到的请求：{}",requestURI);
 //        定义不逊要处理的请求路径
         String[] urls = new String[]{
                 "/employee/login",
                 "/employee/logout",
                 "/backend/**",
-                "/front/**"
+                "/front/**",
+                "/common/**",
+                "/user/sendMsg",
+                "/user/login"
         };
 
         boolean check = check(urls, requestURI);
@@ -51,6 +55,15 @@ public class LoginCheckFilter implements Filter {
             Long employeeId = (Long) request.getSession().getAttribute("employee");
             //把session中取出来的用户id===》ThreadLocal类
             BaseContext.setCurrentId(employeeId);
+            filterChain.doFilter(request, response);
+            return;
+        }
+        //移动端判断
+        if (request.getSession().getAttribute("user") != null) {
+            //判断成功后，先获取到用户的id
+            Long userId = (Long) request.getSession().getAttribute("user");
+            //把session中取出来的用户id===》ThreadLocal类
+            BaseContext.setCurrentId(userId);
             filterChain.doFilter(request, response);
             return;
         }
