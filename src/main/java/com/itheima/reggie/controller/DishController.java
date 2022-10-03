@@ -16,8 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -51,9 +49,10 @@ public class DishController {
         queryWrapper.like(name != null, Dish::getName, name);
         queryWrapper.orderByDesc(Dish::getUpdateTime);
         dishService.page(pageInfo, queryWrapper);
-        //对象拷贝
+        //对象拷贝===》除了records都拷贝-----records是记录集合
         BeanUtils.copyProperties(pageInfo, dishDtoPage, "records");
         List<Dish> records = pageInfo.getRecords();
+        //item代表遍历出来的每个dish
         List<DishDto> list = records.stream().map((item) -> {
             DishDto dishDto = new DishDto();
             BeanUtils.copyProperties(item, dishDto);
@@ -65,6 +64,7 @@ public class DishController {
             }
             return dishDto;
         }).collect(Collectors.toList());
+
         dishDtoPage.setRecords(list);
         return R.success(dishDtoPage);
     }
@@ -111,30 +111,51 @@ public class DishController {
      * @return
      */
     @DeleteMapping
-    public R<String> delete(Long[] ids){
+    public R<String> delete(@RequestParam List<Long> ids){
         log.info(ids.toString());
-        List<Long> longs = Arrays.asList(ids);
-        dishService.removeByIds(longs);
-        return R.success("删除成功");
+        return dishService.removeByIdsAndFlavor(ids);
     }
-    @PostMapping("/status/{StatusCode}")
-    public R<String> StopSaleAndStartSale(@PathVariable int StatusCode,Long[] ids){
+
+    /**
+     * 菜品的停售和起售
+     * @param statusCode
+     * @param ids
+     * @return
+     */
+    @PostMapping("/status/{statusCode}")
+    public R<String> StopSaleAndStartSale(@PathVariable int statusCode, Long[] ids){
         ArrayList<Dish> dishArrayList = new ArrayList<>();
 
         for (int i =0; i< ids.length; i++){
             Dish dish = new Dish();
             dish.setId(ids[i]);
-            dish.setStatus(StatusCode);
+            dish.setStatus(statusCode);
             dishArrayList.add(dish);
         }
-        if(StatusCode == 0){
+        if(statusCode == 0){
             dishService.updateBatchById(dishArrayList,ids.length);
             return R.success("停售成功");
         }
-        if(StatusCode == 1){
+        if(statusCode == 1){
             dishService.updateBatchById(dishArrayList,ids.length);
             return R.success("起售成功");
         }
         return R.success("未知错误,请刷新");
+    }
+
+    /**
+     * 根据条件查询菜品信息
+     * @param dish
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Dish>> list(Dish dish){
+        LambdaQueryWrapper<Dish> queryWrapper = Wrappers.lambdaQuery();
+        queryWrapper.eq(dish.getCategoryId() != null,Dish::getCategoryId,dish.getCategoryId());
+        //只查起售菜品
+        queryWrapper.eq(Dish::getStatus,1);
+        queryWrapper.orderByAsc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
+        List<Dish> list = dishService.list(queryWrapper);
+        return R.success(list);
     }
 }
