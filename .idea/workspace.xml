@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3577d3dd-caae-494a-91ba-3ee7f59b41b5" name="变更" comment="套餐完成加前期菜品bug修改">
+    <list default="true" id="3577d3dd-caae-494a-91ba-3ee7f59b41b5" name="变更" comment="菜品redis缓存">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/ReggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/ReggieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/SetmealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/api/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/js/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/js/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/page/address.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/page/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/SetmealController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/SetmealController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/filter/LoginCheckFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/filter/LoginCheckFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/service/DishService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/service/DishService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/api/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/js/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/js/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/address.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/page/address.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/page/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/page/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,8 +83,11 @@
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.386149" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reactor" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -169,6 +162,26 @@
       <workItem from="1664940124621" duration="7345000" />
       <workItem from="1665020772271" duration="21426000" />
       <workItem from="1665292461428" duration="5061000" />
+      <workItem from="1665501683932" duration="168000" />
+      <workItem from="1665557442109" duration="1340000" />
+      <workItem from="1665661790735" duration="651000" />
+      <workItem from="1665665576115" duration="189000" />
+      <workItem from="1665669693351" duration="172000" />
+      <workItem from="1665670171572" duration="1124000" />
+      <workItem from="1665820740226" duration="16000" />
+      <workItem from="1665821790855" duration="250000" />
+      <workItem from="1665883532764" duration="58000" />
+      <workItem from="1665911333337" duration="174000" />
+      <workItem from="1666098069007" duration="1744000" />
+      <workItem from="1666164389107" duration="2095000" />
+      <workItem from="1666166934894" duration="112000" />
+      <workItem from="1666187700105" duration="1206000" />
+      <workItem from="1666232256171" duration="352000" />
+      <workItem from="1666267742391" duration="6140000" />
+      <workItem from="1666328858705" duration="13000" />
+      <workItem from="1666339589180" duration="692000" />
+      <workItem from="1666345557692" duration="1146000" />
+      <workItem from="1666351717037" duration="1001000" />
     </task>
     <task id="LOCAL-00001" summary="公共字段">
       <created>1663858762160</created>
@@ -219,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664780650172</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="菜品redis缓存">
+      <created>1666273301270</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666273301270</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +262,8 @@
     <MESSAGE value="文件上传和下载" />
     <MESSAGE value="菜品功能完结" />
     <MESSAGE value="套餐完成加前期菜品bug修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="套餐完成加前期菜品bug修改" />
+    <MESSAGE value="菜品redis缓存" />
+    <option name="LAST_COMMIT_MESSAGE" value="菜品redis缓存" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
