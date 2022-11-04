@@ -7,7 +7,6 @@
     <list default="true" id="3577d3dd-caae-494a-91ba-3ee7f59b41b5" name="变更" comment="套餐redis缓存（SpringCache）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +201,7 @@
       <workItem from="1666498395251" duration="5521000" />
       <workItem from="1666582961784" duration="2236000" />
       <workItem from="1666946717812" duration="1240000" />
-      <workItem from="1667564881737" duration="1600000" />
+      <workItem from="1667564881737" duration="2158000" />
     </task>
     <task id="LOCAL-00001" summary="公共字段">
       <created>1663858762160</created>
@@ -288,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667567441512</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="套餐redis缓存（SpringCache）">
+      <created>1667568229248</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667568229248</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
