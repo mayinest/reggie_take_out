@@ -173,7 +173,7 @@ public class DishController {
          * 4.最后都封装成DishDto集合返回
          */
 
-
+        int i = 1/0;
         //先从redis中获取缓冲数据
         //动态构造key
         String key = "dish_"+dish.getCategoryId() + "_" +dish.getStatus();

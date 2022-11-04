@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3577d3dd-caae-494a-91ba-3ee7f59b41b5" name="变更" comment="菜品redis缓存">
+    <list default="true" id="3577d3dd-caae-494a-91ba-3ee7f59b41b5" name="变更" comment="套餐redis缓存（SpringCache）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/ReggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/ReggieApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/common/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/SetmealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/SetmealController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/SetmealController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/DishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +177,18 @@
       <workItem from="1666328858705" duration="13000" />
       <workItem from="1666339589180" duration="692000" />
       <workItem from="1666345557692" duration="1146000" />
-      <workItem from="1666351717037" duration="1001000" />
+      <workItem from="1666351717037" duration="3081000" />
+      <workItem from="1666358846523" duration="1413000" />
+      <workItem from="1666362163456" duration="2000" />
+      <workItem from="1666414014572" duration="784000" />
+      <workItem from="1666434401251" duration="37000" />
+      <workItem from="1666442283415" duration="632000" />
+      <workItem from="1666442978673" duration="2199000" />
+      <workItem from="1666449503731" duration="1477000" />
+      <workItem from="1666490808427" duration="608000" />
+      <workItem from="1666498395251" duration="5521000" />
+      <workItem from="1666582961784" duration="2236000" />
+      <workItem from="1666946717812" duration="1240000" />
     </task>
     <task id="LOCAL-00001" summary="公共字段">
       <created>1663858762160</created>
@@ -239,7 +246,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666273301270</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="套餐redis缓存（SpringCache）">
+      <created>1666352908234</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666352908234</updated>
+    </task>
+    <task id="LOCAL-00010" summary="套餐redis缓存（SpringCache）">
+      <created>1666352934906</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666352934906</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +284,8 @@
     <MESSAGE value="菜品功能完结" />
     <MESSAGE value="套餐完成加前期菜品bug修改" />
     <MESSAGE value="菜品redis缓存" />
-    <option name="LAST_COMMIT_MESSAGE" value="菜品redis缓存" />
+    <MESSAGE value="套餐redis缓存（SpringCache）" />
+    <option name="LAST_COMMIT_MESSAGE" value="套餐redis缓存（SpringCache）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
