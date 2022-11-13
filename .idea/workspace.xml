@@ -371,7 +371,7 @@
       <workItem from="1667911687801" duration="4041000" />
       <workItem from="1667919511716" duration="446000" />
       <workItem from="1668320499120" duration="130000" />
-      <workItem from="1668320642443" duration="2174000" />
+      <workItem from="1668320642443" duration="3016000" />
     </task>
     <task id="LOCAL-00001" summary="公共字段">
       <created>1663858762160</created>
@@ -576,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668322564784</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="套餐redis缓存（SpringCache）">
+      <created>1668322843214</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1668322843214</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
