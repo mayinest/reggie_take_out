@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3577d3dd-caae-494a-91ba-3ee7f59b41b5" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="3577d3dd-caae-494a-91ba-3ee7f59b41b5" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -370,7 +368,7 @@
       <workItem from="1667911687801" duration="4041000" />
       <workItem from="1667919511716" duration="446000" />
       <workItem from="1668320499120" duration="130000" />
-      <workItem from="1668320642443" duration="1030000" />
+      <workItem from="1668320642443" duration="1353000" />
     </task>
     <task id="LOCAL-00001" summary="公共字段">
       <created>1663858762160</created>
@@ -533,7 +531,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668321408387</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="套餐redis缓存（SpringCache）">
+      <created>1668321728745</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1668321728745</updated>
+    </task>
+    <task id="LOCAL-00025" summary="套餐redis缓存（SpringCache）">
+      <created>1668321800753</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1668321800754</updated>
+    </task>
+    <task id="LOCAL-00026" summary="套餐redis缓存（SpringCache）">
+      <created>1668321829289</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1668321829289</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -595,7 +614,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="44" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="107" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="43" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
